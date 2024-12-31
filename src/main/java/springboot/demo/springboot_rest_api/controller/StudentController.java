@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import springboot.demo.springboot_rest_api.bean.Student;
@@ -56,4 +57,17 @@ public class StudentController {
                                       @PathVariable("last-name") String lastName) {
      return new Student(studentId, firstName, lastName);
    }
+
+   /**
+    * SpringBoot REST API - Request Param
+    * HTTP GET request
+    * URL - http://localhost:8080/students/query?id=1&firstName=John&lastName=Doe
+    * @return
+    */
+    @GetMapping("students/query")
+    public Student studentRequestParam(@RequestParam int id,
+                                       @RequestParam String firstName,
+                                       @RequestParam String lastName) {
+      return new Student(id, firstName, lastName);
+    }
 }

@@ -76,13 +76,13 @@ This project is a Spring Boot REST API designed to demonstrate fundamental RESTf
 
   ```bash
   cd springboot-rest-api
-
+  ```
 
 3.	Build and run the project using Maven:
 
   ```bash
   mvn spring-boot:run
-
+  ```
 
 4.	Access the endpoints at http://localhost:8080.
 
